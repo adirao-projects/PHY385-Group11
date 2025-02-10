@@ -1,0 +1,313 @@
+\documentclass[aip, cp, amsmath, amssymb, reprint]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+\input{preamble/preamble}
+\input{preamble/tikz}
+\input{preamble/macros}
+
+
+% ========================================= %
+% LaTeX Template by Aditya K. Rao
+% Contact at adi.rao@mail.utoronto.ca
+
+% Change for each document [!!!]
+\newcommand\course{PHY385}	% Course Code [!!!]
+\newcommand\doctitle{Investigation Into The Effect of Polarizors and Waveplates on a Helium-Neon Laser} % Report Title [!!!]
+\newcommand\firstauthorname{Aditya K. Rao}
+\newcommand\firstauthorstdnum{Student Number: 1008307761}
+\newcommand\firstauthoremail{adi.rao@mail.utoronto.ca}
+%\newcommand\secondauthorname{Author Two}
+%\newcommand\secondauthorstdnum{Student Number: 0000000000}
+%\newcommand\secondauthoremail{report.author@mail.utoronto.ca}
+\newcommand\advname{Boris Braverman } % Advisor Name [!!!]  
+\newcommand\taname{Michael Sloan } % Advisor Name [!!!]   
+\newcommand{\location}{MP222} % Location [!!!]
+% ========================================= %
+ 
+% ============== EQUIPMENT ================ %
+
+\newcommand{\oscope}{\texttt{DSOX1202G}\,}
+\newcommand{\pdiode}{\texttt{DET36A2}\,}
+\newcommand{\hene}{\texttt{HNLS008L}\,}
+
+% ========================================= %
+
+%\pagenumbering{gobble}
+\usepackage{listings}
+
+\renewcommand\lstlistingname{Code Reference}
+\renewcommand\lstlistlistingname{Code Reference}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\usepackage{circuitikz}
+
+%\addbibresource{references.bib}
+\usepackage{lipsum}
+\usetikzlibrary{calc}
+
+\begin{document}
+\onecolumngrid
+\pagenumbering{arabic}
+\title{\doctitle}
+\author{\firstauthorname}
+\email{\firstauthoremail}
+\thanks{\firstauthorstdnum}
+%\email{report.author@mail.utoronto.ca}
+%\thanks{Student Number: 0000000000}
+\affiliation{
+University of Toronto \\
+\location, 60 St. George Street, Toronto, Ontario M5S 1A7, Canada.% Force line breaks with \\ if necessary
+}
+
+\date{\today} %Put in date of submission [!!!]
+
+\preprint{APS/123-QED}
+\begin{abstract}
+    ABSTRACT
+\end{abstract}
+    \maketitle
+    \tableofcontents 
+
+    \lhead{\firstauthorname\vspace{0.1cm}}
+    \chead{\textbf{\course} \\ \doctitle}
+    \rhead{\textbf{Prof:} \advname \\ \textbf{Loc:} \location}
+    \nocite{*}
+
+    \newpage
+    \twocolumngrid
+    \section{Introduction}
+        Electromagnetic waves are modeled as transverse plane waves that oscillate in the direction perpendicular to their propagation. The electric field of these waves can be described by \eqref{eqn:electric_field}.
+    
+        \begin{equation} \label{eqn:electric_field}
+            \vec{E}_0 = E_i\hat{i} + E_J\hat{j}
+        \end{equation}
+
+        One properties of such waves is their ability to become `polarized'. This annihlates all other oscillations apart from a single plane. This can be achieved by passing the wave through a polarizer. The intensity of the light that passes through the polarizer is given by \eqref{eqn:malus}. 
+
+        \begin{equation} \label{eqn:malus}
+            I = I_0 \cos^2(\theta)
+        \end{equation}
+
+        In this experiment, the power is recorded as opposed to the intensity. However, because the power is proportional to the intensity, the same equation can be used. The power of an Electromagnetic wave is directly proportional to the product of its electric field and its complex conjugate. This is given by \eqref{eqn:power}. 
+
+        \begin{equation} \label{eqn:power}
+            P \propto |E_0|^2
+        \end{equation}
+
+        Waveplates are another common optical element which, instead of restricting the oscillations of the electric field, shift the phase of the wave. This is done by changing the refractive index of the material.
+        
+        \begin{equation} \label{eqn:generalized-polarizer}
+            \hat{\Pi}_{\theta} = \begin{bmatrix} \cos^2(\theta) & \sin(\theta)\cos(\theta) \\ \sin(\theta)\cos(\theta) & \sin^2(\theta)\end{bmatrix}
+        \end{equation}
+
+        \begin{equation} \label{eqn:jones-mat}
+            \hat{J} = \chi\hat{\Pi}_{0'} + \zeta\hat{\Pi}_{1'}
+        \end{equation}
+
+        Here, two different types of waveplate will be investigated: quarter and half waveplates. The quarter waveplate shifts the phase of the wave by $\pi/2$ radians. The half waveplate shifts the phase of the wave by $\pi$ radians. The resultant effect on the power should be that the power is unchanged for the half wave plate and that the power is reduced for the quarter waveplate due to destructive and constructive interference of the $E_x$ and $E_y$ components.
+
+        The jones matrix for a waveplate is given by \eqref{eqn:jones-mat}. Here, $\chi$ and $\zeta$ are the complex amplitudes of the electric field. For the quarter waveplate, the Jones matrix is given by \eqref{eqn:quarter-waveplate}. For the half waveplate, the Jones matrix is given by \eqref{eqn:half-waveplate}.
+        \begin{minipage}{\linewidth}
+        \centering
+        \begin{minipage}{0.55\linewidth}
+            \begin{equation} \label{eqn:quarter-waveplate}
+                \hat{J}_{QWP} = \begin{bmatrix} 1 & 0 \\ 0 & \exp\left\{\frac{i\pi}{2}\right\}\end{bmatrix}
+            \end{equation}
+        \end{minipage}
+        \begin{minipage}{0.44\linewidth}
+            \begin{equation} \label{eqn:half-waveplate}
+                \hat{J}_{HWP} = \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}
+            \end{equation}
+        \end{minipage}
+        \end{minipage}
+        % \begin{equation} \label{eqn:quarter-waveplate}
+        %     \hat{J}_{QWP} = \begin{bmatrix} 1 & 0 \\ 0 & e^{i\pi/2}\end{bmatrix}
+        % \end{equation}
+
+        % \begin{equation} \label{eqn:half-waveplate}
+        %     \hat{J}_{HWP} = \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}
+        % \end{equation}
+
+    \section{Methodology}
+        Two experiments were conducted in order to test and verify the effects of polarizrs and waveplates on a Helium-Neon (HeNe) laser with an additional third being planned. The experimental setup for each is shwon in Figures \ref{fig:exp1-setup} and \ref{fig:exp2-setup} respectively. 
+        
+        For each experiment, a \texttt{PDA015C2} photodiode was used to measure the intensity of the light. The photodiode was connected to a \texttt{DSO } oscilloscope which was used to measure the voltage output from the optical setup. The HeNe laser was the first component attached to the optical breadboard. All other components were then roughly placed in position (not clamped) after which fine \& coarse adjustments were made to align the beam path. 
+
+        To reduce ambient light a shroud was put over the photodiode. The resultent baseline voltage dropped from ~2V to $\approx 240 \pm 10 \,\text{mV}$.
+
+        \subsection{Polarizers}
+            The second polarizer was removed from the post holder. The polarizer's angle was then adjusted such that the outputed power delivered to the photodiode was below its saturation voltage. This maximum power output was recorded at $V=5.00\,V$. The angle of the polarizer was recorded as $157.69^\circ \pm 0.01^\circ$. 
+            
+            \begin{figure}[H]
+                \centering
+                \input{figures/exp1setup.tex}
+                \caption{Experimental Setup for Experiment 1}
+                \label{fig:exp1-setup}
+            \end{figure}
+            
+            This was kept the same for subsequent measurments. The second polarizer was then varied in angle from $0^\circ$ to $270^\circ$ in increments of $10^\circ$. The voltage output from the photodiode was recorded for each angle.
+
+            To reduce ambient light a shroud was put over the photodiode. The resultent baseline voltage dropped from ~2V to $\approx 240 \pm 10 \,\text{mV}$.
+
+            Upon adding the second polarizer, massive fluctuations in the output voltage were observed (on the order of at least $0.5\,V$, but proportional to the output voltage). This was likely due to an issue with the battery of the photodiode. However, upon replacing the battery, no change in the output was observed. Therefore, the issue was likely within the output of the HeNe laser. The is documented furhter later in the report. In order to mitigate this abnormality, the output voltage was recorded at specific time intervals where the output voltage was semi-stable.
+
+        \subsection{Waveplates}
+            The experimental setup in Fig. \ref{fig:exp1-setup} was modified to place a waveplate between the two polarizers. In the first part of the experiment, the effect of a quarter waveplate was tested. The waveplate was placed at an angle of $0^\circ$ with respect to the horizontal. The second polarizer was then varied in angle from $0^\circ$ to $220^\circ$ i\,\text{V}n increments of $20^\circ$. The voltage output from the photodiode was recorded for each angle.
+
+            \begin{figure}[H]
+                \centering
+                \input{figures/exp2setup.tex}
+                \caption{Experimental Setup for Experiment 2}
+                \label{fig:exp2-setup}
+            \end{figure}
+
+            This was then followed by a similar experiment with a half waveplate. The waveplate was placed at an angle of $0^\circ$ with respect to the horizontal. The second polarizer was then varied in angle from $0^\circ$ to $220^\circ$ in increments of $20^\circ$. The voltage output from the photodiode was recorded for each angle.
+
+        \subsection{Dielectrics}
+            Due to time constraints, this experiment was not completed in full. The proposed setup is shown in Fig. \ref{fig:exp3-setup}. The setup was to be similar to the previous two experiments, with the addition of a dielectric material between the two polarizers. The dielectric material was to be placed at an angle of $0^\circ$ with respect to the horizontal. The second polarizer was then varied in angle from $0^\circ$ to $220^\circ$ in increments of $20^\circ$. The voltage output from the photodiode was to be recorded for each angle.
+
+            \begin{figure}[H]
+                \centering
+                \input{figures/exp3setup.tex}
+                \caption{Proposed Experimental Setup for Experiment 3}
+                \label{fig:exp3-setup}
+            \end{figure}
+
+            The proposed experimental procedure would have been similar to the previous two experiments. However, instead of varying the angle of the polarizer, instead, the dielectric would have been rotated through $180^\circ$ in increments of $10^\circ$. The resultant voltage output would have been recorded for each angle.
+
+
+    \section{Results \& Analysis}
+        \subsection{Polarizers}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.9\linewidth]{../figures/Malus.png}
+                \caption{Voltage Output vs. Polarizer Angle. $\chi_{red}^2 = 1.58$, $I_0 = 8.0 \pm 0.2\,\text{V}$, $\phi = 0.82 \pm 0.02$}
+                \label{fig:part1}
+            \end{figure}
+
+            It can clearly be seen in \figref{fig:part1} that the data adheres well to theory. All of the data points, apart from one outlier, falls well within the estimated uncertainty of the fitted curve given in \eqref{eqn:malus}. It should be stated that the $\chi^2$ value of 1.58 is slightly high, however, the lack of a distinct pattern in the residuals indicate that this is a good fit regardless.
+
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{c|c|c}
+                    \bfseries Parameter & \bfseries Value & \bfseries Uncertainty \\
+                    \hline
+                    $I_0$ & $8.0$ & $0.2$ \\
+                    $\phi$ & $0.82$ & $0.02$ \\
+                \end{tabular}
+            \end{table}
+
+         \subsection{Quarter Waveplate}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.9\linewidth]{../figures/Quarter.png}
+                \caption{Voltage Output vs. Quarter Waveplate Angle. $\chi_{red}^2 = 0.01$, $I_0 = 5.66 \pm 0.03\,\text{V}$, $\phi = -0.218 \pm 0.004$, $\gamma = 2.001 \pm 0.003$}
+                \label{fig:part2a}
+            \end{figure}
+
+
+            In \figref{fig:part2a}, the data adheres well to the theoretical curve. The $\chi^2$ value of 0.01 indicates that the data is a very good fit to the theoretical curve. The residuals are also randomly distributed around zero, indicating that the fit is good.
+
+
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{c|c|c}
+                    \bfseries Parameter & \bfseries Value & \bfseries Uncertainty \\
+                    \hline
+                    $I_0$ & $5.66$ & $0.03$ \\
+                    $\phi$ & $-0.2175$ & $0.004$ \\
+                    $\gamma$ & $2.001$ & $0.003$ \\
+                \end{tabular}
+            \end{table}
+
+        \subsection{Half Waveplate}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.9\linewidth]{../figures/Half.png}
+                \caption{Voltage Output vs. Half Waveplate Angle. $\chi_{red}^2 = 0.25$, $I_0 = 7.6 \pm 0.1\,\text{V}$, $\phi = -0.21 \pm 0.01$, $\gamma = 2.00 \pm 0.01$}
+                \label{fig:part2b}
+            \end{figure}
+
+
+            \begin{table}[H]
+                \centering
+                \begin{tabular}{c|c|c}
+                    \bfseries Parameter & \bfseries Value & \bfseries Uncertainty \\
+                    \hline
+                    $I_0$ & $7.6$ & $0.1$ \\
+                    $\phi$ & $-0.21$ & $0.01$ \\
+                    $\gamma$ & $2.00$ & $0.01$ \\
+                \end{tabular}
+            \end{table}
+
+    
+    \section{Discussion}
+        An interesting result can be observed in comparing \figref{fig:part2b} and \figref{fig:part1}. The recorded maximum intensity $I_0$ is almost (bar a factor $V = 0.4\,\text{V}$) identical despite the polarizers being set at angles to pass the minimum amount of light. This implies that at $\theta = \frac{\pi}{2}$, the half waveplate effectively makes the second polarizer transparent.
+
+    \section{Conclusion}
+
+
+
+    % Line to seperate report content from acknowledgements and references
+    \onecolumngrid
+    \begin{center}
+        \vspace{0.8cm}
+        \noindent\rule{0.9\textwidth}{0.5pt}
+    \end{center}
+
+    \begin{acknowledgments}
+        The work conducted by the other lab partners was instrumental in this lab. Thank you to Jack and Billy for their help in setting up the equipment and conducting the experiments. Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
+    \end{acknowledgments}
+
+\bibliography{references}
+
+\appendix
+\section{Appendix}
+\subsection{Raw Data}
+\subsubsection{Experiment 1: Polarizers}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|c|c}%
+    \bfseries Polarizer \#1 ($\phantom{\ \ }^{\circ}$) & \bfseries Polarizer \#2 ($\phantom{\ \ }^{\circ}$) & \bfseries Voltage (V)
+    \csvreader[head to column names]{../part1.csv}{}% use head of csv as column names
+    {\\\hline\Pa &\Pb & \W}% specify your coloumns here
+    \end{tabular}
+\end{table}
+
+% \subsubsection{Experiment 2: Waveplates}
+\subsubsection{Experiment 2: Quarter Waveplate}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|c|c|c}%
+    \bfseries Polarizer \#1 ($\phantom{\ \ }^{\circ}$) & \bfseries Polarizer \#2 ($\phantom{\ \ }^{\circ}$) & \bfseries QWP ($\phantom{\ \ }^{\circ}$) & \bfseries Voltage (V)
+    \csvreader[head to column names]{../part2a.csv}{}% use head of csv as column names
+    {\\\hline\Pa &\Pb & \QWP & \W}% specify your coloumns here
+    \end{tabular}
+\end{table}
+
+%\lstinputlisting{code/part2a.py}
+
+\subsubsection{Experiment 2: Half Waveplate}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|c|c|c}%
+    \bfseries Polarizer \#1 ($\phantom{\ \ }^{\circ}$) & \bfseries Polarizer \#2 ($\phantom{\ \ }^{\circ}$) & \bfseries HWP ($\phantom{\ \ }^{\circ}$) & \bfseries Voltage (V)
+    \csvreader[head to column names]{../part2b.csv}{}% use head of csv as column names
+    {\\\hline\Pa &\Pb & \HWP & \W}
+    \end{tabular}
+\end{table}
+
+
+\subsection{Analysis Code}
+\subsubsection{Experiment 1: Polarizers}
+\lstinputlisting{../part1.py}
+\subsubsection{Experiment 2: Waveplates}
+\lstinputlisting{../part2.py}
+\subsubsection{Toolkit}
+\lstinputlisting{../toolkit.py}
+
+\end{document}\subsubsection{Experiment 2: Waveplates}

@@ -1,0 +1,27 @@
+\contentsline {title}{Investigation Into The Effect of Polarizors and Waveplates on a Helium-Neon Laser}{1}{section*.1}%
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{section*.2}%
+\tocdepth@restore 
+\contentsline {section}{\numberline {}Introduction}{2}{section*.3}%
+\contentsline {section}{\numberline {}Methodology}{2}{section*.4}%
+\contentsline {subsection}{\numberline {}Polarizers}{2}{section*.5}%
+\contentsline {subsection}{\numberline {}Waveplates}{3}{section*.7}%
+\contentsline {subsection}{\numberline {}Dielectrics}{3}{section*.9}%
+\contentsline {section}{\numberline {}Results \& Analysis}{4}{section*.11}%
+\contentsline {subsection}{\numberline {}Polarizers}{4}{section*.12}%
+\contentsline {subsection}{\numberline {}Quarter Waveplate}{4}{section*.15}%
+\contentsline {subsection}{\numberline {}Half Waveplate}{5}{section*.18}%
+\contentsline {section}{\numberline {}Discussion}{5}{section*.21}%
+\contentsline {section}{\numberline {}Conclusion}{5}{section*.22}%
+\contentsline {section}{\numberline {}Acknowledgments}{6}{section*.23}%
+\contentsline {section}{\numberline {}References}{6}{section*.24}%
+\appendix 
+\contentsline {section}{\numberline {}Appendix}{7}{section*.25}%
+\contentsline {subsection}{\numberline {}Raw Data}{7}{section*.26}%
+\contentsline {subsubsection}{\numberline {}Experiment 1: Polarizers}{7}{section*.27}%
+\contentsline {subsubsection}{\numberline {}Experiment 2: Quarter Waveplate}{8}{section*.29}%
+\contentsline {subsubsection}{\numberline {}Experiment 2: Half Waveplate}{8}{section*.31}%
+\contentsline {subsection}{\numberline {}Analysis Code}{8}{section*.33}%
+\contentsline {subsubsection}{\numberline {}Experiment 1: Polarizers}{8}{section*.34}%
+\contentsline {subsubsection}{\numberline {}Experiment 2: Waveplates}{10}{section*.35}%
+\contentsline {subsubsection}{\numberline {}Toolkit}{12}{section*.36}%

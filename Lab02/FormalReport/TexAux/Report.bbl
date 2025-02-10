@@ -1,0 +1,67 @@
+%merlin.mbs aipnum4-1.bst 2010-07-25 4.21a (PWD, AO, DPC) hacked
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (1) range
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{5}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Braverman}(2025)}]{labmanual}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 1: Polarization},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Van~Rossum}\ and\ \citenamefont {Drake}(2009)}]{python}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Van~Rossum}}\ and\ \bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont {Drake}},\ }\href@noop {} {\emph {\bibinfo {title} {Python 3 Reference Manual}}}\ (\bibinfo  {publisher} {CreateSpace},\ \bibinfo {address} {Scotts Valley, CA},\ \bibinfo {year} {2009})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Harris}\ \emph {et~al.}(2020)\citenamefont {Harris}, \citenamefont {Millman}, \citenamefont {van~der Walt}, \citenamefont {Gommers}, \citenamefont {Virtanen}, \citenamefont {Cournapeau}, \citenamefont {Wieser}, \citenamefont {Taylor}, \citenamefont {Berg}, \citenamefont {Smith}, \citenamefont {Kern}, \citenamefont {Picus}, \citenamefont {Hoyer}, \citenamefont {van Kerkwijk}, \citenamefont {Brett}, \citenamefont {Haldane}, \citenamefont {del R{\'{i}}o}, \citenamefont {Wiebe}, \citenamefont {Peterson}, \citenamefont {G{\'{e}}rard-Marchant}, \citenamefont {Sheppard}, \citenamefont {Reddy}, \citenamefont {Weckesser}, \citenamefont {Abbasi}, \citenamefont {Gohlke},\ and\ \citenamefont {Oliphant}}]{numpy}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~R.}\ \bibnamefont {Harris}}, \bibinfo {author} {\bibfnamefont {K.~J.}\ \bibnamefont {Millman}}, \bibinfo {author} {\bibfnamefont {S.~J.}\ \bibnamefont {van~der Walt}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Gommers}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Virtanen}}, \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Cournapeau}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Wieser}}, \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Taylor}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Berg}}, \bibinfo {author} {\bibfnamefont {N.~J.}\ \bibnamefont {Smith}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kern}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Picus}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Hoyer}}, \bibinfo {author} {\bibfnamefont {M.~H.}\ \bibnamefont {van Kerkwijk}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Brett}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Haldane}}, \bibinfo {author} {\bibfnamefont {J.~F.}\ \bibnamefont {del R{\'{i}}o}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Wiebe}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Peterson}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {G{\'{e}}rard-Marchant}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Sheppard}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Reddy}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Weckesser}}, \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Abbasi}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Gohlke}}, \ and\ \bibinfo {author} {\bibfnamefont {T.~E.}\ \bibnamefont {Oliphant}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Array programming with {NumPy}},}\ }\href {\doibase 10.1038/s41586-020-2649-2} {\bibfield  {journal} {\bibinfo  {journal} {Nature}\ }\textbf {\bibinfo {volume} {585}},\ \bibinfo {pages} {357--362} (\bibinfo {year} {2020})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {{The pandas development team}}(2020)}]{pandas}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {{The pandas development team}}},\ }\href {\doibase 10.5281/zenodo.3509134} {\enquote {\bibinfo {title} {pandas-dev/pandas: Pandas},}\ } (\bibinfo {year} {2020})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Doe}(2024)}]{pcomm}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Doe}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance Recieved}\BibitemShut {NoStop}%
+\end{thebibliography}%

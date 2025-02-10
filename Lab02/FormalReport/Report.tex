@@ -1,0 +1,123 @@
+\documentclass[aip, cp, amsmath, amssymb, reprint]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+\input{preamble/preamble}
+\input{preamble/tikz}
+\input{preamble/macros}
+
+
+
+
+
+% ========================================= %
+% LaTeX Template by Aditya K. Rao
+% Contact at adi.rao@mail.utoronto.ca
+
+% Change for each document [!!!]
+\newcommand\course{PHY385}	% Course Code [!!!]txt
+\newcommand\doctitle{Michael Interferometer} % Report Title [!!!]
+\newcommand\firstauthorname{Aditya K. Rao}
+\newcommand\firstauthorstdnum{Student Number: 1008307761}
+\newcommand\firstauthoremail{adi.rao@mail.utoronto.ca}
+%\newcommand\secondauthorname{Author Two}
+%\newcommand\secondauthorstdnum{Student Number: 0000000000}
+%\newcommand\secondauthoremail{report.author@mail.utoronto.ca}
+\newcommand\advname{Boris Braverman\space} % Advisor Name [!!!]  
+\newcommand\taname{Michael Sloan\space} % Advisor Name [!!!]   
+\newcommand{\location}{MP222} % Location [!!!]
+% ========================================= %
+ 
+% ============== EQUIPMENT ================ %
+
+\newcommand{\oscope}{\texttt{DSOX1202G}\space}
+\newcommand{\pdiode}{\texttt{DET36A2}\space}
+\newcommand{\hene}{\texttt{HNLS008L}\space}
+
+% ========================================= %
+
+
+
+%\pagenumbering{gobble}
+\usepackage{listings}
+
+\renewcommand\lstlistingname{Code Reference}
+\renewcommand\lstlistlistingname{Code Reference}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\usepackage{circuitikz}
+
+%\addbibresource{references.bib}
+\usepackage{lipsum}
+\usetikzlibrary{calc}
+
+\begin{document}
+\onecolumngrid
+\pagenumbering{arabic}
+\title{\doctitle}
+\author{\firstauthorname}
+\email{\firstauthoremail}
+\thanks{\firstauthorstdnum}
+%\email{report.author@mail.utoronto.ca}
+%\thanks{Student Number: 0000000000}
+\affiliation{
+University of Toronto \\
+\location, 60 St. George Street, Toronto, Ontario M5S 1A7, Canada.% Force line breaks with \\ if necessary
+}
+
+\date{\today} %Put in date of submission [!!!]
+
+\preprint{APS/123-QED}
+\begin{abstract}
+    ABSTRACT
+\end{abstract}
+    \maketitle
+    \tableofcontents 
+
+    \lhead{\firstauthorname\vspace{0.1cm}}
+    \chead{\textbf{\course} \\ \doctitle}
+    \rhead{\textbf{Prof:} \advname \\ \textbf{TA:} \taname \\ \textbf{Loc:} \location}
+    \nocite{*}
+
+    \newpage
+    \twocolumngrid
+    \section{Introduction}
+    
+        \begin{equation} \label{eqn:fringeconstrast}
+            F = \dfrac{V_{\text{max}} - V_{\text{min}}}{V_{\text{max}} + V_{\text{min}}}
+        \end{equation}
+
+    \section{Results \& Analysis}
+        
+    
+    \section{Discussion}
+        
+    \section{Conclusion}
+
+
+
+    % Line to seperate report content from acknowledgements and references
+    \onecolumngrid
+    \begin{center}
+        \vspace{0.8cm}
+        \noindent\rule{0.9\textwidth}{0.5pt}
+    \end{center}
+
+    \begin{acknowledgments}
+        The work conducted by the other lab partners was instrumental in this lab. Thank you to Jack and Billy for their help in setting up the equipment and conducting the experiments. Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
+    \end{acknowledgments}
+
+\bibliography{references}
+
+\appendix
+\section{Appendix}
+\subsection{Raw Data}
+
+\subsection{Analysis Code}
+\subsubsection{Toolkit}
+\lstinputlisting{../toolkit.py}
+
+\end{document}

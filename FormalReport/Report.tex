@@ -1,0 +1,96 @@
+\documentclass[aip, cp, amsmath, amssymb, reprint]{revtex4-2}
+
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+
+\input{preamble/preamble}
+\input{preamble/tikz}
+\input{preamble/macros}
+
+% ========================================= %
+% LaTeX Template by Aditya K. Rao
+% Contact at adi.rao@mail.utoronto.ca
+
+% Change for each document [!!!]b
+\newcommand\course{Course Code}	% Course Code [!!!]
+\newcommand\doctitle{Report Title} % Report Title [!!!]
+\newcommand\firstauthorname{Report Author}
+\newcommand\firstauthorstdnum{Student Number: 0000000000}
+\newcommand\firstauthoremail{report.author@mail.utoronto.ca}
+%\newcommand\secondauthorname{Author Two}
+%\newcommand\secondauthorstdnum{Student Number: 0000000000}
+%\newcommand\secondauthoremail{report.author@mail.utoronto.ca}
+\newcommand\advname{Professor Name} % Advisor Name [!!!]   
+\newcommand{\location}{MPxyz} % Location [!!!]
+% ========================================= %
+ 
+\pagenumbering{gobble}
+\usepackage{listings}
+
+\renewcommand\lstlistingname{Code Reference}
+\renewcommand\lstlistlistingname{Code Reference}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+
+\usepackage{circuitikz}
+
+%\addbibresource{references.bib}
+\usepackage{lipsum}
+\usetikzlibrary{calc}
+
+\begin{document}
+\onecolumngrid
+\pagenumbering{arabic}
+\title{\doctitle}
+\author{\firstauthorname}
+\email{\firstauthoremail}
+\thanks{\firstauthorstdnum}
+%\email{report.author@mail.utoronto.ca}
+%\thanks{Student Number: 0000000000}
+\affiliation{
+University of Toronto \\
+\location, 60 St. George Street, Toronto, Ontario M5S 1A7, Canada.% Force line breaks with \\ if necessary
+}
+
+\date{\today} %Put in date of submission [!!!]
+
+\preprint{APS/123-QED}
+
+\begin{abstract}
+    ABSTRACT
+\end{abstract}
+    \maketitle
+    \tableofcontents 
+
+    \lhead{\firstauthorname\vspace{0.1cm}}
+    \chead{\textbf{\course} \\ \doctitle}
+    \rhead{\textbf{Prof:} \advname \\ \textbf{Loc:} \location}
+    
+    %\pagenumbering{arabic}
+    \newpage
+    \twocolumngrid
+    \section{Introduction}
+    SECTION
+        
+
+
+    % Line to seperate report content from acknowledgements and references
+    \onecolumngrid
+    \begin{center}
+        \vspace{0.8cm}
+        \noindent\rule{0.9\textwidth}{0.5pt}
+    \end{center}
+
+    \begin{acknowledgments}
+        ACKNOWLEDGMENTS
+    \end{acknowledgments}
+
+\nocite{*}
+\bibliography{references}
+
+\appendix
+\section{APPENDIX 1}
+APPENDIX 1
+
+\end{document}
