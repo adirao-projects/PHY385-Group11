@@ -9,9 +9,6 @@
 \input{preamble/macros}
 
 
-
-
-
 % ========================================= %
 % LaTeX Template by Aditya K. Rao
 % Contact at adi.rao@mail.utoronto.ca
@@ -26,7 +23,9 @@
 %\newcommand\secondauthorstdnum{Student Number: 0000000000}
 %\newcommand\secondauthoremail{report.author@mail.utoronto.ca}
 \newcommand\advname{Boris Braverman\space} % Advisor Name [!!!]  
-\newcommand\taname{Michael Sloan\space} % Advisor Name [!!!]   
+\newcommand\taname{Michael Sloan\space} % Advisor Name [!!!] 
+\newcommand\lponename{Jack Wang\space}
+\newcommand\lptwoname{Yiheng Wang\space}  
 \newcommand{\location}{MP222} % Location [!!!]
 % ========================================= %
  
@@ -61,6 +60,10 @@
 \author{\firstauthorname}
 \email{\firstauthoremail}
 \thanks{\firstauthorstdnum}
+
+\author{\lponename}
+\author{\lptwoname}
+
 %\email{report.author@mail.utoronto.ca}
 %\thanks{Student Number: 0000000000}
 \affiliation{
@@ -72,29 +75,55 @@ University of Toronto \\
 
 \preprint{APS/123-QED}
 \begin{abstract}
-    ABSTRACT
+    An experiment was designed and attempted to build a Michaelson Interferometer and quantify the interferences patterns observed. The experiment was conducted using a \hene laser, beam splitter, and mirrors. The fringe contrast was calculated to be $0.5$.
 \end{abstract}
     \maketitle
-    \tableofcontents 
+    %\tableofcontents 
 
     \lhead{\firstauthorname\vspace{0.1cm}}
     \chead{\textbf{\course} \\ \doctitle}
-    \rhead{\textbf{Prof:} \advname \\ \textbf{TA:} \taname \\ \textbf{Loc:} \location}
+    \rhead{\textbf{Prof:} \advname \\ \textbf{TA:} \taname}
     \nocite{*}
 
-    \newpage
+    %\newpage
     \twocolumngrid
     \section{Introduction}
+        Invented by Albert Abraham Michelson 1887 \cite{pwoptics}, the Michaelson Interferometer is a configuration of mirrors and beam splitters which can be used to quantify the interference patterns of light. It has been instrumental in the development of quantum mechanics and the theory of relativity. The Michaelson Interferometer is used in a variety of applications, including the measurement of the speed of light, the refutation of the existance of the ether, and the study of quantum mechanics.
+
+        Michaelson Interferometers work on the basic principle of interference. In the experimental setup, a beam of light is split into two paths by a 50:50 beam splitter. The two beams are then reflected by mirrors and recombined at the beam splitter. The recombined beams interfere with each other, creating a pattern of light and dark fringes. The fringe contrast is a measure of the visibility of the fringes and is calculated using \eqref{eqn:fringeconstrast}.
     
         \begin{equation} \label{eqn:fringeconstrast}
             F = \dfrac{V_{\text{max}} - V_{\text{min}}}{V_{\text{max}} + V_{\text{min}}}
         \end{equation}
 
+        Depending on the relative path difference, $d$, between the two reflected beams, there will be a time delay, $\tau$ defined by \eqref{eqn:timedelay} \cite{pwoptics}.
+
+        \begin{equation} \label{eqn:timedelay}
+            \tau = \dfrac{d}{c}
+        \end{equation}            
+
+        With the resultant intensity quantified by \eqref{eqn:intensity} \cite{pwoptics}.
+
+        \begin{equation} \label{eqn:intensity}
+            I = 2 I_0 \left[1 +  \cos(\omega t)\right]
+        \end{equation}
+
+
+    \section{Methodology}
+
+        \begin{figure}[H]
+            \input{figures/expsetup.tex}
+            \caption{Figure}
+        \end{figure}
+
+
+
     \section{Results \& Analysis}
         
     
     \section{Discussion}
-        
+    
+    
     \section{Conclusion}
 
 
@@ -105,9 +134,9 @@ University of Toronto \\
         \vspace{0.8cm}
         \noindent\rule{0.9\textwidth}{0.5pt}
     \end{center}
-
+/home/adi/University/Physics/PHY385/Labs/Lab02/parta.csv
     \begin{acknowledgments}
-        The work conducted by the other lab partners was instrumental in this lab. Thank you to Jack and Billy for their help in setting up the equipment and conducting the experiments. Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
+        The work conducted by the other lab partners was instrumental in this lab. Thank you to \lponename and \lptwoname for their help in setting up the equipment and conducting the experiments. Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
     \end{acknowledgments}
 
 \bibliography{references}

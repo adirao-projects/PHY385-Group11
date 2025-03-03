@@ -52,6 +52,9 @@
 \bibitem [{\citenamefont {Braverman}(2025)}]{labmanual}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 1: Polarization},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Peatross}\ and\ \citenamefont {Ware}(2015)}]{peatross_ware_2015}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Peatross}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ware}},\ }\href@noop {} {\emph {\bibinfo {title} {Physics of Light and Optics}}}\ (\bibinfo  {publisher} {Brigham Young University, Department of Physics},\ \bibinfo {address} {Provo, Utah},\ \bibinfo {year} {2015})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Van~Rossum}\ and\ \citenamefont {Drake}(2009)}]{python}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Van~Rossum}}\ and\ \bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont {Drake}},\ }\href@noop {} {\emph {\bibinfo {title} {Python 3 Reference Manual}}}\ (\bibinfo  {publisher} {CreateSpace},\ \bibinfo {address} {Scotts Valley, CA},\ \bibinfo {year} {2009})\BibitemShut {NoStop}%
@@ -61,7 +64,4 @@
 \bibitem [{\citenamefont {{The pandas development team}}(2020)}]{pandas}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{The pandas development team}}},\ }\href {\doibase 10.5281/zenodo.3509134} {\enquote {\bibinfo {title} {pandas-dev/pandas: Pandas},}\ } (\bibinfo {year} {2020})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Doe}(2024)}]{pcomm}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Doe}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance Recieved}\BibitemShut {NoStop}%
 \end{thebibliography}%

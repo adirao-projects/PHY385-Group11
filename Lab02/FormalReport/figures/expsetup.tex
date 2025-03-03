@@ -2,9 +2,10 @@
     \coordinate (L) at (0,0);
     \coordinate (M1) at (1.5,0);
     \coordinate (M2) at (1.5,-1.5);
-    \coordinate (P1) at (3,-1.5);
-    \coordinate (P2) at (4,-1.5);
-    \coordinate (D) at (5,-1.5);
+    \coordinate (B) at (3,-1.5);
+    \coordinate (M3) at (3,0);
+    \coordinate (M4) at (4.5,-1.5);
+    \coordinate (D) at (3,-3);
 
     % Laser Symbol
     \begin{scope}[scale=0.7]
@@ -35,20 +36,26 @@
         %\coordinate (M2) at (0,-0.15);
     \end{scope}
 
-    % Polarizer #1
-    \begin{scope}[shift={(P1)}, scale=0.5]
-        \draw[thick] (-0.2,0.6) rectangle (0.2,-0.6);
-        \draw[thick] (-0.2,0.6) -- (0.2,-0.6);
-        \draw[thick] (0.2,0.6) -- (-0.2,-0.6);
-        %\coordinate (P1) at (0,0);
+
+    % Mirror #3
+    \begin{scope}[shift={(M3)}]
+        \draw[ultra thick] (-0.5,0) -- (0.5,0);
+        \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
+        %\coordinate (M1) at (0,-0.15);
     \end{scope}
 
-    % Polarizer #2
-    \begin{scope}[shift={(P2)}, scale=0.5]
-        \draw[thick] (-0.2,0.6) rectangle (0.2,-0.6);
-        \draw[thick] (-0.2,0.6) -- (0.2,-0.6);
-        \draw[thick] (0.2,0.6) -- (-0.2,-0.6);
-        %\coordinate (P2) at (0,0);
+    % Mirror #4
+    \begin{scope}[shift={(M4)}, rotate=-90]
+        \draw[ultra thick] (-0.5,0) -- (0.5,0);
+        \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
+        %\coordinate (M2) at (0,-0.15);
+    \end{scope}
+
+    % Beam Splitter
+    \begin{scope}[shift={(B)}, scale=0.5]
+        \draw[thick] (-0.5, -0.5) rectangle (0.5, 0.5);
+        \draw[dashed] (-0.5,-0.5) -- (0.5,0.5);
+        %\coordinate (P1) at (0,0);
     \end{scope}
 
     % Detector
@@ -59,5 +66,24 @@
     \end{scope}
 
     % Laser Path
-    \draw[ultra thick, dashed] (L) -- (M1) -- (M2) -- (P1) -- (P2) -- (D);
+    \draw[ultra thick, dashed] (L) -- (M1) -- (M2) -- (B);
+    
+    \draw[ultra thick, dotted] ($(B)+(0,0.05)$) -- ($(M4)+(0,0.05)$);
+    \draw[ultra thick, dashed] ($(B)+(0,-0.05)$) -- ($(M4)+(0,-0.05)$);
+    
+    \draw[ultra thick, dotted] ($(B)+(0.05,0)$) -- ($(M3)+(0.05,0)$);
+    \draw[ultra thick, dashed] ($(B)+(-0.05,0)$) -- ($(M3)+(-0.05,0)$);
+
+    \draw[ultra thick, dotted] (B) -- (D);
+
+
+    % Labels
+    \node[anchor=south, yshift=15] at (L) {Laser};
+    \node[anchor=north, yshift=-5] at (D) {Photodiode};
+    \node[anchor=south, yshift=15] at (M1) {Mirror};
+    \node[anchor=north, yshift=-15] at (M2) {Mirror};
+    \node[anchor=south, yshift=10] at (M3) {Mirror};
+    \node[anchor=south, yshift=15] at (M4) {Mirror};
+    \node[anchor=north, yshift=-15, xshift=30] at (B) {Beam Splitter};
+
 \end{tikzpicture}

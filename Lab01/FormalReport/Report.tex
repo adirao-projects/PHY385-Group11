@@ -15,23 +15,25 @@
 
 % Change for each document [!!!]
 \newcommand\course{PHY385}	% Course Code [!!!]
-\newcommand\doctitle{Investigation Into The Effect of Polarizors and Waveplates on a Helium-Neon Laser} % Report Title [!!!]
+\newcommand\doctitle{Effect of Linear Polarizers and Waveplates on Helium-Neon Laser} % Report Title [!!!]
 \newcommand\firstauthorname{Aditya K. Rao}
 \newcommand\firstauthorstdnum{Student Number: 1008307761}
 \newcommand\firstauthoremail{adi.rao@mail.utoronto.ca}
 %\newcommand\secondauthorname{Author Two}
 %\newcommand\secondauthorstdnum{Student Number: 0000000000}
 %\newcommand\secondauthoremail{report.author@mail.utoronto.ca}
-\newcommand\advname{Boris Braverman } % Advisor Name [!!!]  
-\newcommand\taname{Michael Sloan } % Advisor Name [!!!]   
+\newcommand\advname{Boris Braverman\space} % Advisor Name [!!!]  
+\newcommand\taname{Colin Dale\space} % Advisor Name [!!!] 
+\newcommand\lponename{Jack Wang\space}
+\newcommand\lptwoname{Yiheng Wang\space}  
 \newcommand{\location}{MP222} % Location [!!!]
 % ========================================= %
  
 % ============== EQUIPMENT ================ %
 
-\newcommand{\oscope}{\texttt{DSOX1202G}\,}
-\newcommand{\pdiode}{\texttt{DET36A2}\,}
-\newcommand{\hene}{\texttt{HNLS008L}\,}
+\newcommand{\oscope}{\texttt{DSOX1202G}\space}
+\newcommand{\pdiode}{\texttt{DET36A2}\space}
+\newcommand{\hene}{\texttt{HNLS008L}\space}
 
 % ========================================= %
 
@@ -67,14 +69,14 @@ University of Toronto \\
 
 \preprint{APS/123-QED}
 \begin{abstract}
-    ABSTRACT
+    Three experiments were conducted to verify the behaviour of light when intereacting with linear polarizers and waveplates. Two experimental setups were utilized with a proposed third also being outlined. The first to verify Malus' Law for a two polarizer setup on the intensity of a Helium-Neon laser. It was found that the maximum transmitted intensity occurs at $\theta+\phi = 2.33 \pm 0.02\,\text{rad}$ or $43\pm1^\circ$ considering a phase shift. Placing a waveplate between two orthogonal polarizers yielded $7.6 \pm 0.1\,\text{V}$ ($5\pm3\%$ decrease) for the Half Waveplate and $5.66 \pm 0.03\,\text{V}$ ($30\pm3\%$ decrease) for the Quarter Waveplate. These are both in good agreement with theory when considering the non-ideal nature of physical waveplates.
 \end{abstract}
     \maketitle
     \tableofcontents 
 
     \lhead{\firstauthorname\vspace{0.1cm}}
     \chead{\textbf{\course} \\ \doctitle}
-    \rhead{\textbf{Prof:} \advname \\ \textbf{Loc:} \location}
+    \rhead{\textbf{Prof:} \advname \\ \textbf{TA:} \taname}
     \nocite{*}
 
     \newpage
@@ -110,20 +112,20 @@ University of Toronto \\
 
         Here, two different types of waveplate will be investigated: quarter and half waveplates. The quarter waveplate shifts the phase of the wave by $\pi/2$ radians. The half waveplate shifts the phase of the wave by $\pi$ radians. The resultant effect on the power should be that the power is unchanged for the half wave plate and that the power is reduced for the quarter waveplate due to destructive and constructive interference of the $E_x$ and $E_y$ components.
 
-        The jones matrix for a waveplate is given by \eqref{eqn:jones-mat}. Here, $\chi$ and $\zeta$ are the complex amplitudes of the electric field. For the quarter waveplate, the Jones matrix is given by \eqref{eqn:quarter-waveplate}. For the half waveplate, the Jones matrix is given by \eqref{eqn:half-waveplate}.
-        \begin{minipage}{\linewidth}
-        \centering
-        \begin{minipage}{0.55\linewidth}
+        The jones matrix for a waveplate is given by \eqref{eqn:jones-mat}. Here, $\chi$ and $\zeta$ are the complex amplitudes of the electric field. For the quarter waveplate, the Jones matrix is given by \eqref{eqn:quarter-waveplate}. For the half waveplate, the Jones matrix is given by \eqref{eqn:half-waveplate}. Note that both of these matrices are with respect to the horizontal and represent the fast axis.
+        % \begin{minipage}{\linewidth}
+        % \centering
+        % \begin{minipage}{0.45\linewidth}
             \begin{equation} \label{eqn:quarter-waveplate}
-                \hat{J}_{QWP} = \begin{bmatrix} 1 & 0 \\ 0 & \exp\left\{\frac{i\pi}{2}\right\}\end{bmatrix}
+                \hat{J}_{QWP} = \frac{1}{\sqrt{2}}\begin{bmatrix} \cos^2\theta+i\sin^2\theta & (1-i)\sin\theta\cos\theta \\ (1-i)\sin\theta\cos\theta & \sin^2\theta+i\cos^2\theta\end{bmatrix}
             \end{equation}
-        \end{minipage}
-        \begin{minipage}{0.44\linewidth}
+        % \end{minipage}
+        % \begin{minipage}{0.54\linewidth}
             \begin{equation} \label{eqn:half-waveplate}
-                \hat{J}_{HWP} = \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}
+                \hat{J}_{HWP} = \begin{bmatrix} \cos2\theta & \sin2\theta \\ \sin2\theta & -\cos2\theta\end{bmatrix}
             \end{equation}
-        \end{minipage}
-        \end{minipage}
+        % \end{minipage}
+        % \end{minipage}
         % \begin{equation} \label{eqn:quarter-waveplate}
         %     \hat{J}_{QWP} = \begin{bmatrix} 1 & 0 \\ 0 & e^{i\pi/2}\end{bmatrix}
         % \end{equation}
@@ -131,6 +133,45 @@ University of Toronto \\
         % \begin{equation} \label{eqn:half-waveplate}
         %     \hat{J}_{HWP} = \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix}
         % \end{equation}
+
+        In order to predict the power output after the waveplate and polarizers, one can perform the following Jones matrix multiplication for the Quarter Waveplate.
+
+        \begin{align*}
+            \vec{J_{QWP}}' &= \frac{1}{\sqrt{2}}\hat{J_0}\hat{J}_{QWP}\hat{J}_1\vec{J} \\
+            &= \frac{1}{\sqrt{2}}\begin{bmatrix} 1 & 0 \\ 0 & 0\end{bmatrix}\begin{bmatrix} \cos^2\theta+i\sin^2\theta & (1-i)\sin\theta\cos\theta \\ (1-i)\sin\theta\cos\theta & \sin^2\theta+i\cos^2\theta\end{bmatrix}\\
+            &\space\cdot \begin{bmatrix} 0 & 0 \\ 0 & 1\end{bmatrix}\begin{bmatrix} E_x \\ E_y\end{bmatrix} \\
+            &= \frac{1}{\sqrt{2}}\begin{bmatrix} \cos^2\theta+i\sin^2\theta & (1-i)\sin\theta\cos\theta \\ 0 & 0\end{bmatrix}\begin{bmatrix} 0 \\ E_y\end{bmatrix} \\
+            &= \frac{1}{\sqrt{2}}\begin{bmatrix} E_y(1-i)\sin\theta\cos\theta \\ 0\end{bmatrix}
+        \end{align*}
+        The power then follows from \eqref{eqn:power}.
+
+        \begin{align*} 
+            P &= 4(E_y(1-i)\sin\theta\cos\theta)\cdot(E_y(1-i)\sin\theta\cos\theta)^{*}  \\
+            &= 4|E_y|^2\sin^2\theta\cos^2\theta
+        \end{align*}
+
+        Note that $E_y$ is just a relative angle, hence, we obtain \eqref{eqn:qwp-pow}. Where $E_0$ is the initial power of the wave out of the first polarizer.
+
+        \begin{equation} \label{eqn:qwp-pow}
+            P = 4|I_0|^2\sin^2\theta\cos^2\theta
+        \end{equation}
+
+        For the Half Waveplate, the calculation is as follows.
+
+        \begin{align*}
+            \vec{J_{HWP}}' &= \hat{J_0}\hat{J}_{HWP}\hat{J}_1\vec{J} \\
+            &= \begin{bmatrix} 1 & 0 \\ 0 & 0\end{bmatrix}\begin{bmatrix} \cos2\theta & \sin2\theta \\ \sin2\theta & -\cos2\theta\end{bmatrix} \begin{bmatrix} 0 & 0 \\ 0 & 1\end{bmatrix}\begin{bmatrix} E_x \\ E_y\end{bmatrix} \\
+            &= \begin{bmatrix} \cos2\theta & \sin2\theta \\ 0 & 0\end{bmatrix}\begin{bmatrix} 0 \\ E_y\end{bmatrix} \\
+            &= \begin{bmatrix} E_y\sin2\theta \\ 0\end{bmatrix}
+        \end{align*}
+
+        Similarly, the power is given by \eqref{eqn:hwp-pow}.
+
+        \begin{equation} \label{eqn:hwp-pow}
+            P = |I_0|^2\sin^2(2\theta)
+        \end{equation}
+
+        From \eqref{eqn:hwp-pow}, one can deduce that there is an angle $\theta$ such that the power is maximized with the polarizers effectively becoming `transparent'. This angle, from \eqref{eqn:hwp-pow}, should be at $\theta = \frac{\pi}{4}$ relative to the first polarizer.        
 
     \section{Methodology}
         Two experiments were conducted in order to test and verify the effects of polarizrs and waveplates on a Helium-Neon (HeNe) laser with an additional third being planned. The experimental setup for each is shwon in Figures \ref{fig:exp1-setup} and \ref{fig:exp2-setup} respectively. 
@@ -185,7 +226,7 @@ University of Toronto \\
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.9\linewidth]{../figures/Malus.png}
-                \caption{Voltage Output vs. Polarizer Angle. $\chi_{red}^2 = 1.58$, $I_0 = 8.0 \pm 0.2\,\text{V}$, $\phi = 0.82 \pm 0.02$}
+                \caption{Experimental analysis of Malus' law for two linear polarizers. The maximum intensity was found to be $I_0 = 8.0 \pm 0.2\,\text{V}$. A relative offset between the two polarizers was found as $\phi = 0.82 \pm 0.02\,\text{(rad)}$. A goodness-of-fit test yields a $\chi_{red}^2 = 1.58$ indicating a good fit with slight underfitting. However, this is likely due to the distinct outlier present in the data as the residuals show no distinct pattern.}
                 \label{fig:part1}
             \end{figure}
 
@@ -199,58 +240,82 @@ University of Toronto \\
                     $I_0$ & $8.0$ & $0.2$ \\
                     $\phi$ & $0.82$ & $0.02$ \\
                 \end{tabular}
+
+                \caption{Fit parameters for the Malus' Law verifcation experiment.}
+                \label{tab:malus}
             \end{table}
 
          \subsection{Quarter Waveplate}
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.9\linewidth]{../figures/Quarter.png}
-                \caption{Voltage Output vs. Quarter Waveplate Angle. $\chi_{red}^2 = 0.01$, $I_0 = 5.66 \pm 0.03\,\text{V}$, $\phi = -0.218 \pm 0.004$, $\gamma = 2.001 \pm 0.003$}
+                \caption{oltage Output observed using a \pdiode plotted against the angle of a Quarter Waveplate placed between two orthogonal linear polarizers. The fit parameters found are a maximum intensity of $I_0 = 5.66 \pm 0.03\,\text{V}$ and a relative offset of $\phi = -1.002 \pm 0.002\,\text{(rad)}$. The $\chi_{red}^2 = 0.013$, indicates significant overfitting. However, this is likely due to an overestimation of measurment uncertainty in conjunction with a small number of data points.}
                 \label{fig:part2a}
             \end{figure}
 
 
-            In \figref{fig:part2a}, the data adheres well to the theoretical curve. The $\chi^2$ value of 0.01 indicates that the data is a very good fit to the theoretical curve. The residuals are also randomly distributed around zero, indicating that the fit is good.
-
+            In \figref{fig:part2a}, the data adheres well to the theoretical curve. The $\chi_{red}^2 = 0.013$ indicates that the data is extremely overfit. However, the lack of a distinct pattern in the residuals indicates that this is likely due to an overestimation of measurement uncertainty as well as the low number of data points. Otherwise, the data adheres well with the theoretical curve indicated by \eqref{eqn:qwp-pow}.
 
             \begin{table}[H]
                 \centering
                 \begin{tabular}{c|c|c}
                     \bfseries Parameter & \bfseries Value & \bfseries Uncertainty \\
                     \hline
-                    $I_0$ & $5.66$ & $0.03$ \\
-                    $\phi$ & $-0.2175$ & $0.004$ \\
-                    $\gamma$ & $2.001$ & $0.003$ \\
+                    $I_0$ (V) & $5.66$ & $0.03$ \\
+                    $\phi$ (rad) & $-0.2175$ & $0.004$ 
                 \end{tabular}
+                \caption{Fit parameters for the Quarter Waveplate experiment.}
+                \label{tab:qwp}
             \end{table}
 
         \subsection{Half Waveplate}
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.9\linewidth]{../figures/Half.png}
-                \caption{Voltage Output vs. Half Waveplate Angle. $\chi_{red}^2 = 0.25$, $I_0 = 7.6 \pm 0.1\,\text{V}$, $\phi = -0.21 \pm 0.01$, $\gamma = 2.00 \pm 0.01$}
+                \caption{Voltage Output observed using a \pdiode plotted against the angle of a Half Waveplate placed between two orthogonal linear polarizers. The fit parameters found are a maximum intensity of $I_0 = 7.6 \pm 0.1\,\text{V}$ and a relative offset of $\phi = 1.14 \pm 0.01$. The $\chi_{red}^2 = 0.2$ indicates an overfitting to the data. However, given the lack of significant pattern in the residuals, this is likely due to an overestimation of the measurement uncertainty.}
                 \label{fig:part2b}
             \end{figure}
 
-
+            Similarly to the Quarter Waveplate, the data in \figref{fig:part2b} adheres well to the theoretical curve. The $\chi_{red}^2 = 0.2$ indicates that the data is overfit. However, the lack of a distinct pattern in the residuals indicates the same as before. The parameters found in Table \ref{tab:hwp} are in good agreement with \eqref{eqn:hwp-pow}.
             \begin{table}[H]
                 \centering
                 \begin{tabular}{c|c|c}
                     \bfseries Parameter & \bfseries Value & \bfseries Uncertainty \\
                     \hline
-                    $I_0$ & $7.6$ & $0.1$ \\
-                    $\phi$ & $-0.21$ & $0.01$ \\
-                    $\gamma$ & $2.00$ & $0.01$ \\
+                    $I_0$ (V) & $7.6$ & $0.1$ \\
+                    $\phi$ (rad) & $-0.21$ & $0.01$ 
                 \end{tabular}
+                \caption{Fit parameters for the Half Waveplate experiment.}
+                \label{tab:hwp}
             \end{table}
 
     
     \section{Discussion}
-        An interesting result can be observed in comparing \figref{fig:part2b} and \figref{fig:part1}. The recorded maximum intensity $I_0$ is almost (bar a factor $V = 0.4\,\text{V}$) identical despite the polarizers being set at angles to pass the minimum amount of light. This implies that at $\theta = \frac{\pi}{2}$, the half waveplate effectively makes the second polarizer transparent.
+        An interesting result can be observed in comparing \figref{fig:part2b} and \figref{fig:part1}. The recorded maximum intensity $I_0$ is almost (bar a factor $V = 0.4\,\text{V}$) identical despite the linear polarizers being orthogonal relateive to one another.
+        
+        Plugging in the offset parameter, the angle $\theta$ for which these maxima can be found from \eqref{eqn:hwp-pow}.
+        \begin{align*}
+            2\theta + \phi &= 1.78 \pm 0.01 \\
+            \implies \theta &= \frac{1}{2}\cdot(1.78 \pm 0.01 - \phi) \\
+            &= 0.320 \pm 0.005\,\text{rad} \\
+            &= 18.3 \pm 0.3^\circ
+        \end{align*}
+
+        If the offset is also included $\theta+\phi/2 =0.890\pm0.007\,\text{rad}=50.99\pm0.4^\circ$
+
+        Which is close to the expected value of $45^\circ$. This implies that the half waveplate makes the second linear polarizer effectively transparent at this angle.
+
+        Comparing this to the intensity observed in the Malus' law experiment, it can be seen that the maximum intensity is almost identical with a difference of $0.4\pm0.1\,\text{V}$. This is likely due to the fact that the polarizers and waveplates are non-ideal. When comparing this result to the the maximum intensity of the Quarter Waveplate, a decrease of $25\pm3\%$ is observed. This is exactly as expected from the theoretical prediction in \eqref{eqn:qwp-pow} and \eqref{eqn:hwp-pow}.
 
     \section{Conclusion}
+        
+        Three experiments were conducted to investigate the effect of linear polarizers and common waveplates on a \hene laser. Two experimental setups were utilized as can be seen in \figref{fig:exp1-setup} and \figref{fig:exp2-setup} with a third proposed setup in \figref{fig:exp3-setup}. Results were measured utilizing a \pdiode connected to a \oscope oscilloscope with data analysis being conducted in python\cite{python}.
 
+        In the first experiment, it was found that the intensity of light passing through two linear polarizers was well described by Malus' Law. The maximum intensity was found to be $I_0 = 8.0 \pm 0.2\,\text{V}$ with a relative offset of $\phi = 0.82 \pm 0.02\,\text{(rad)}$ utilized as a correction parameter as the exact angle of the polarizers relative to the horizonal plane is not relavent. The data adhered well to the theoretical predication in \eqref{eqn:malus} with a $\chi_{red}^2 = 1.58$ indicating a good fit with slight underfitting. 
 
+        In the second experiment, the setup was modified to test the effects of a Quarter and Half waveplate on the intensity of the HeNe beam. Both results qualitatively adhered well to the theoretical prediction in \eqref{eqn:qwp-pow} and \eqref{eqn:hwp-pow} respectively. However, the goodness-of-fit test indicates significant overfitting. This is likely due to an overestimation of the measurement uncertainty as well as the low number of data points. The maximum output intensity of the Half Waveplate was found to be $I_0 = 7.6 \pm 0.1\,\text{V}$ which is $\Delta I = 0.4\pm0.1,\text{V}$, approximately a $5\pm3\%$ decrease in intensity. The maximum output intensity of the Quarter Waveplate was found to be $I_0 = 5.66 \pm 0.03\,\text{V}$ which is $\Delta I = 2.3\pm0.2,\text{V}$, approximately an $30\pm3\%$ decrease in intensity. This is around $5\%$ higher than expected, however, comparing this to the Half Waveplate, the decrease in intensity is exactly as expected with the Quarter waveplate having a $25\pm3\%$ decrease in intensity. This is likely due to the waveplates being non-ideal and absorbing some of the light.Considering this, it can be seen that at $\theta \approx 45^\circ$ relative to the first polarizer, the Half Waveplate makes the second polarizer effectively transparent. 
+
+        Futher experiments may be conducted with a dielectric to investigate the varying polarizations of reflected light at varying angles of incidence. What should be observed is, at the citical angle, the light should be completely plane polarized.
 
     % Line to seperate report content from acknowledgements and references
     \onecolumngrid
@@ -260,7 +325,7 @@ University of Toronto \\
     \end{center}
 
     \begin{acknowledgments}
-        The work conducted by the other lab partners was instrumental in this lab. Thank you to Jack and Billy for their help in setting up the equipment and conducting the experiments. Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
+        The work conducted by the other lab partners was instrumental in this lab.  Thank you to \lponename and \lptwoname for their help in setting up the equipment and conducting the experiments.  Additionally, thank you to the Teaching Assistant \taname and Professor \advname for their guidance and support.
     \end{acknowledgments}
 
 \bibliography{references}
@@ -268,7 +333,7 @@ University of Toronto \\
 \appendix
 \section{Appendix}
 \subsection{Raw Data}
-\subsubsection{Experiment 1: Polarizers}
+%\subsubsection{Experiment 1: Polarizers}
 \begin{table}[H]
     \centering
     \begin{tabular}{l|c|c}%
@@ -276,10 +341,12 @@ University of Toronto \\
     \csvreader[head to column names]{../part1.csv}{}% use head of csv as column names
     {\\\hline\Pa &\Pb & \W}% specify your coloumns here
     \end{tabular}
+    \caption{Raw data for the Malus' Law verification experiment.}
+    \label{tab:part1}
 \end{table}
 
 % \subsubsection{Experiment 2: Waveplates}
-\subsubsection{Experiment 2: Quarter Waveplate}
+%\subsubsection{Experiment 2: Quarter Waveplate}
 \begin{table}[H]
     \centering
     \begin{tabular}{l|c|c|c}%
@@ -287,11 +354,13 @@ University of Toronto \\
     \csvreader[head to column names]{../part2a.csv}{}% use head of csv as column names
     {\\\hline\Pa &\Pb & \QWP & \W}% specify your coloumns here
     \end{tabular}
+    \caption{Raw data for the Quarter Waveplate experiment.}
+    \label{tab:part2a}
 \end{table}
 
 %\lstinputlisting{code/part2a.py}
 
-\subsubsection{Experiment 2: Half Waveplate}
+%\subsubsection{Experiment 2: Half Waveplate}
 \begin{table}[H]
     \centering
     \begin{tabular}{l|c|c|c}%
@@ -299,15 +368,17 @@ University of Toronto \\
     \csvreader[head to column names]{../part2b.csv}{}% use head of csv as column names
     {\\\hline\Pa &\Pb & \HWP & \W}
     \end{tabular}
+    \caption{Raw data for the Half Waveplate experiment.}
+    \label{tab:part2b}
 \end{table}
 
 
 \subsection{Analysis Code}
-\subsubsection{Experiment 1: Polarizers}
+%\subsubsection{Experiment 1: Polarizers}
 \lstinputlisting{../part1.py}
-\subsubsection{Experiment 2: Waveplates}
+%\subsubsection{Experiment 2: Waveplates}
 \lstinputlisting{../part2.py}
-\subsubsection{Toolkit}
+%\subsubsection{Toolkit}
 \lstinputlisting{../toolkit.py}
 
-\end{document}\subsubsection{Experiment 2: Waveplates}
+\end{document}

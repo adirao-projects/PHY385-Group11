@@ -70,6 +70,11 @@ def fit_plot(df):
                             data['residuals'], meta=meta,
                             uncertainty=y_unc, uncertainty_x=x_unc,
                             save=True)
+    
+    max_I0 = np.max(data['ploty'])
+    idx_maxI0 = np.where(data['ploty'] == max_I0)
+    max_theta = data['plotx'][idx_maxI0]
+    print(f'theta+phi max = {max_theta}')
 
     return data['chisq'], data['popt'], data['pstd']
 
