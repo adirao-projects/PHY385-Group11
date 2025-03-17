@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{6}%
+\begin{thebibliography}{7}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -51,7 +51,7 @@
 %</preamble>
 \bibitem [{\citenamefont {Braverman}(2025)}]{labmanual}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 1: Polarization},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 3: Diffraction},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Peatross}\ and\ \citenamefont {Ware}(2015)}]{pwoptics}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Peatross}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ware}},\ }\href@noop {} {\emph {\bibinfo {title} {Physics of Light and Optics}}}\ (\bibinfo  {publisher} {Brigham Young University},\ \bibinfo {year} {2015})\BibitemShut {NoStop}%
@@ -67,4 +67,7 @@
 \bibitem [{\citenamefont {Doe}(2024)}]{pcomm}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Doe}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance Recieved}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Sloan}(2024)}]{msloan}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sloan}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance in setting up diffraction grating and confirming if fringe pattern is consistent with experimental results.}\BibitemShut {Stop}%
 \end{thebibliography}%

@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{6}%
+\begin{thebibliography}{7}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,12 +49,18 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {This technique was suggested and demonstrated by the Teaching Assistant.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Braverman}(2025)}]{labmanual}%
   \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 1: Polarization},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 2: Interferometer},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Peatross}\ and\ \citenamefont {Ware}(2015)}]{pwoptics}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Peatross}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ware}},\ }\href@noop {} {\emph {\bibinfo {title} {Physics of Light and Optics}}}\ (\bibinfo  {publisher} {Brigham Young University},\ \bibinfo {year} {2015})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thorlabs}(2011)}]{henemanual}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Thorlabs}},\ }\href@noop {} {\emph {\bibinfo {title} {HNLS008L Datasheet}}}\ (\bibinfo {year} {2011})\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Van~Rossum}\ and\ \citenamefont {Drake}(2009)}]{python}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Van~Rossum}}\ and\ \bibinfo {author} {\bibfnamefont {F.~L.}\ \bibnamefont {Drake}},\ }\href@noop {} {\emph {\bibinfo {title} {Python 3 Reference Manual}}}\ (\bibinfo  {publisher} {CreateSpace},\ \bibinfo {address} {Scotts Valley, CA},\ \bibinfo {year} {2009})\BibitemShut {NoStop}%
@@ -64,7 +70,4 @@
 \bibitem [{\citenamefont {{The pandas development team}}(2020)}]{pandas}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibnamefont {{The pandas development team}}},\ }\href {\doibase 10.5281/zenodo.3509134} {\enquote {\bibinfo {title} {pandas-dev/pandas: Pandas},}\ } (\bibinfo {year} {2020})\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Doe}(2024)}]{pcomm}%
-  \BibitemOpen
-  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Doe}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance Recieved}\BibitemShut {NoStop}%
 \end{thebibliography}%

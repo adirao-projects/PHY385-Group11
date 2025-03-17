@@ -1,0 +1,5 @@
+1. Build Interferometer [x]
+2. Lens Interference [x]
+3. Fringe Contrast [ ]
+4. Change Path Length [ ]
+5. How does the Interference pattern change depending on the difference in polarization in the two arms? [ ]

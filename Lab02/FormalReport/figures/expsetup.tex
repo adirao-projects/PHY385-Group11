@@ -1,10 +1,11 @@
 \begin{tikzpicture}
     \coordinate (L) at (0,0);
-    \coordinate (M1) at (1.5,0);
-    \coordinate (M2) at (1.5,-1.5);
+    \coordinate (MA) at (1.5,0);
+    \coordinate (MB) at (1.5,-1.5);
+    \coordinate (I) at (2.2,-1.5);
     \coordinate (B) at (3,-1.5);
-    \coordinate (M3) at (3,0);
-    \coordinate (M4) at (4.5,-1.5);
+    \coordinate (M1) at (3,0);
+    \coordinate (M2) at (4.5,-1.5);
     \coordinate (D) at (3,-3);
 
     % Laser Symbol
@@ -21,31 +22,37 @@
         \draw[rotate=157.5, thick] (-0.4,0) -- (0.4,0);
     \end{scope}
 
+    % Plano-Convex Lens
+    \begin{scope}[shift={(I)}, scale=0.5]
+        \draw (0,0) ellipse (0.4 and 0.7);
+        \filldraw[fill=white, color=white] (0,0.7) rectangle (-0.4,-0.7);
+        \draw (0,0.7) -- (0,-0.7);
+    \end{scope}
 
-    % Mirror #1
-    \begin{scope}[shift={(M1)}, rotate=-45]
+    % Mirror A
+    \begin{scope}[shift={(MA)}, rotate=-45]
         \draw[ultra thick] (-0.5,0) -- (0.5,0);
         \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
         %\coordinate (M1) at (0,-0.15);
     \end{scope}
 
-    % Mirror #2
-    \begin{scope}[shift={(M2)}, rotate=135]
+    % Mirror B
+    \begin{scope}[shift={(MB)}, rotate=135]
         \draw[ultra thick] (-0.5,0) -- (0.5,0);
         \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
         %\coordinate (M2) at (0,-0.15);
     \end{scope}
 
 
-    % Mirror #3
-    \begin{scope}[shift={(M3)}]
+    % Mirror #1
+    \begin{scope}[shift={(M1)}]
         \draw[ultra thick] (-0.5,0) -- (0.5,0);
         \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
         %\coordinate (M1) at (0,-0.15);
     \end{scope}
 
-    % Mirror #4
-    \begin{scope}[shift={(M4)}, rotate=-90]
+    % Mirror #2
+    \begin{scope}[shift={(M2)}, rotate=-90]
         \draw[ultra thick] (-0.5,0) -- (0.5,0);
         \fill[pattern=north east lines] (-0.5,0) rectangle (0.5,0.30);
         %\coordinate (M2) at (0,-0.15);
@@ -66,24 +73,31 @@
     \end{scope}
 
     % Laser Path
-    \draw[ultra thick, dashed] (L) -- (M1) -- (M2) -- (B);
+    \draw[ultra thick, dashed] (L) -- (MA) -- (MB) -- (I) -- (B);
     
-    \draw[ultra thick, dotted] ($(B)+(0,0.05)$) -- ($(M4)+(0,0.05)$);
-    \draw[ultra thick, dashed] ($(B)+(0,-0.05)$) -- ($(M4)+(0,-0.05)$);
+    \draw[ultra thick, dotted] ($(B)+(0,0.05)$) -- ($(M2)+(0,0.05)$);
+    \draw[ultra thick, dashed] ($(B)+(0,-0.05)$) -- ($(M2)+(0,-0.05)$);
     
-    \draw[ultra thick, dotted] ($(B)+(0.05,0)$) -- ($(M3)+(0.05,0)$);
-    \draw[ultra thick, dashed] ($(B)+(-0.05,0)$) -- ($(M3)+(-0.05,0)$);
+    \draw[ultra thick, dotted] ($(B)+(0.05,0)$) -- ($(M1)+(0.05,0)$);
+    \draw[ultra thick, dashed] ($(B)+(-0.05,0)$) -- ($(M1)+(-0.05,0)$);
 
     \draw[ultra thick, dotted] (B) -- (D);
+
+
+    % Arm Length
+    \draw[<->] ($(B)+(0,-0.2)$) -- ($(M2)+(0,-0.2)$) node[midway, below] {$d$};
 
 
     % Labels
     \node[anchor=south, yshift=15] at (L) {Laser};
     \node[anchor=north, yshift=-5] at (D) {Photodiode};
-    \node[anchor=south, yshift=15] at (M1) {Mirror};
-    \node[anchor=north, yshift=-15] at (M2) {Mirror};
-    \node[anchor=south, yshift=10] at (M3) {Mirror};
-    \node[anchor=south, yshift=15] at (M4) {Mirror};
+    \node[anchor=south, yshift=15] at (MA) {Mirror};
+    \node[anchor=north, yshift=-15] at (MB) {Mirror};
+    \node[anchor=south, yshift=10] at (M1) {Mirror (M1)};
+    \node[anchor=south, yshift=15, xshift=10] at (M2) {Mirror (M2)};
     \node[anchor=north, yshift=-15, xshift=30] at (B) {Beam Splitter};
+    \draw[<-] ($(I)+(0,-0.5)$) -- ($(I)+(0,-1)$) -- ($(I)+(-0.25,-1.25)$)node[anchor=east] {Plano-Convex};
+    \node[anchor=north, xshift=-25, yshift=-3] at ($(I)+(-0.25,-1.25)$) {Lens};
+    %\node[anchor=south, yshift=15] at (I) {Plano-Convex Lens};
 
 \end{tikzpicture}

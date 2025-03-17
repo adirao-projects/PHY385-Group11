@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex TexAux/Report"] 1741026307.6863 "TexAux/Report.aux" "TexAux/Report.bbl" "TexAux/Report" 1741026309.56937 0
+["bibtex TexAux/Report"] 1742167136.62647 "TexAux/Report.aux" "TexAux/Report.bbl" "TexAux/Report" 1742167137.79275 0
   "./aipnum4-2.bst" 1717458491.47027 71946 9fa96ecf8fb8f8f61f756ef3cc211820 ""
-  "./references.bib" 1740964156.46334 1942 651208a4d572326fa7021f22e47e4ba4 ""
-  "TexAux/Report.aux" 1741026309.37504 2924 99868d92d99da5c59dbd47f7ab0bd217 "pdflatex"
-  "TexAux/ReportNotes.bib" 1741026309.37504 69 d99b699d067ab3f906420b0b7ca24b61 "pdflatex"
+  "./references.bib" 1742166733.84727 2172 9e0c142cdcc43e7a8978c27eaec4912f ""
+  "TexAux/Report.aux" 1742167137.66903 2866 ef22aa9ec7626e11e95ca00283811eb0 "pdflatex"
+  "TexAux/ReportNotes.bib" 1742167137.66903 69 d99b699d067ab3f906420b0b7ca24b61 "pdflatex"
   (generated)
   "TexAux/Report.bbl"
   "TexAux/Report.blg"
   (rewritten before read)
-["pdflatex"] 1741026307.7152 "/home/adi/University/Physics/PHY385/Labs/Lab03/FormalReport/Report.tex" "TexAux/Report.pdf" "Report" 1741026309.56966 0
-  "../toolkit.py" 1739201189.0614 9750 cb9d8bae0d5e717ace88f11224418240 ""
+["pdflatex"] 1742167136.64624 "/home/adi/University/Physics/PHY385/Labs/Lab03/FormalReport/Report.tex" "TexAux/Report.pdf" "Report" 1742167137.79294 0
+  "../toolkit.py" 1742165807.41124 12047 3bb0fba56d9189dbcfab8b753f84f888 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -58,9 +58,9 @@
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb" 1215737283 175641 e30a691dc1402b08fd6535cf8a31e5b7 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb" 1215737283 170827 2e4b634de7b58578eae1dc93e51dfe48 ""
-  "/home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/symbol/usyr.pfb" 1136849748 33709 b09d2e140b7e807d3a97058263ab6693 ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1136849748 44729 811d6c62865936705a31c797a1d5dada ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1136849748 44656 0cbca70e0534538582128f6b54593cca ""
   "/home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1136849748 46026 6dab18b61c907687b520c72847215a68 ""
@@ -269,13 +269,13 @@
   "/home/adi/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728346970 336840 71290a1edcd46914742d087fb6b44a36 ""
   "/home/adi/.TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1728341867 1901290 ae562d26cb1c185f100bc6f9dec28557 ""
   "/home/adi/.TinyTeX/texmf.cnf" 1728341823.73605 637 edd806fb06a89761a6034e1968af9017 ""
-  "/home/adi/University/Physics/PHY385/Labs/Lab03/FormalReport/Report.tex" 1741026305.18172 5509 439ced26a5070478216c8581acab142b ""
-  "Report.tex" 1741026305.18172 5509 439ced26a5070478216c8581acab142b ""
-  "TexAux/Report.aux" 1741026309.37504 2924 99868d92d99da5c59dbd47f7ab0bd217 "pdflatex"
-  "TexAux/Report.bbl" 1741026307.70171 6515 09933198d7c7798590f06028f7975419 "bibtex TexAux/Report"
-  "TexAux/Report.out" 1741026309.37504 1497 866ab52dbc7e682a5a34762f0ac7130d "pdflatex"
+  "/home/adi/University/Physics/PHY385/Labs/Lab03/FormalReport/Report.tex" 1742167135.07569 4239 107c68d27a24611177eb94e7d1d25035 ""
+  "Report.tex" 1742167135.07569 4239 107c68d27a24611177eb94e7d1d25035 ""
+  "TexAux/Report.aux" 1742167137.66903 2866 ef22aa9ec7626e11e95ca00283811eb0 "pdflatex"
+  "TexAux/Report.bbl" 1742167136.6357 6913 0a9be7499d71becfc2c1598ca0a044be "bibtex TexAux/Report"
+  "TexAux/Report.out" 1742167137.66903 1497 866ab52dbc7e682a5a34762f0ac7130d "pdflatex"
   "aip4-2.rtx" 1717458491.57583 59973 6ad0a1d9bc62e3555b839921467e1176 ""
-  "figures/expsetup.tex" 1740963809.9143 3028 1607aa17c1c188c26fc89ca608e37eeb ""
+  "figures/expsetup.tex" 1741030778.5802 2941 052b693671beaecd13add33d7370d7ee ""
   "preamble/macros.tex" 1727723538.86236 2603 fedc0228f783310dadce28fffb718f51 ""
   "preamble/preamble.tex" 1739174552.03201 3975 0547a3126665050a8731c8a7c913201c ""
   "preamble/tikz.tex" 1726978023.27417 1911 127b50988176d8a4cdb6ee320491c258 ""
