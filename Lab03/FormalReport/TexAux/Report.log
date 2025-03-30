@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  16 MAR 2025 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.7)  18 MAR 2025 18:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1011,38 +1011,90 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+
+Overfull \hbox (5.9675pt too wide) in paragraph at lines 94--95
+\T1/ptm/m/n/10 Diffraction was first ob-served by Francesco Maria Grimaldi
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
- (./figures/expsetup.tex) [1{/home/adi/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (TexAux/Report.bbl)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 143.
- (../toolkit.py [2] [3] [4] [5] [6] [7] [8] [9]) [10] (TexAux/Report.aux)
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 98.
+(./figures/angleapprox.tex)
+Overfull \hbox (6.2267pt too wide) in paragraph at lines 131--132
+\T1/ptm/m/n/10 ap-per-a-ture of width and height $\OML/ztmcm/m/it/10 D[] \OT1/ztmcm/m/n/10 = 200 \OMS/ztmcm/m/n/10 ^^F \OT1/ztmcm/m/n/10 6\OML/ztmcm/m/it/10 ^^V[]$ \T1/ptm/m/n/10 (\T1/cmtt/m/n/10 Thorlabs
+ []
+
+[1{/home/adi/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}{/home/adi/.TinyTeX/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./figures/expsetup.tex)
+<figures/pwcirc.png, id=90, 249.18094pt x 249.18094pt>
+File: figures/pwcirc.png Graphic file (type png)
+<use figures/pwcirc.png>
+Package pdftex.def Info: figures/pwcirc.png  used on input line 149.
+(pdftex.def)             Requested size: 100.98944pt x 100.98616pt.
+<figures/pwrect.png, id=94, 249.93375pt x 249.18094pt>
+File: figures/pwrect.png Graphic file (type png)
+<use figures/pwrect.png>
+Package pdftex.def Info: figures/pwrect.png  used on input line 154.
+(pdftex.def)             Requested size: 100.98944pt x 100.68578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+[]\T1/ptm/m/n/9 (b) |Rect-an-gu-lar Ap-per-a-ture
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
+\T1/ptm/m/n/9 Cal-cu-la-tion us-ing method
+ []
+
+<figures/square.png, id=98, 2601.72pt x 1951.29pt>
+File: figures/square.png Graphic file (type png)
+<use figures/square.png>
+Package pdftex.def Info: figures/square.png  used on input line 169.
+(pdftex.def)             Requested size: 183.2007pt x 137.37839pt.
+[2 <./figures/pwcirc.png> <./figures/pwrect.png> <./figures/square.png>]
+<figures/circle.png, id=118, 2601.72pt x 1951.29pt>
+File: figures/circle.png Graphic file (type png)
+<use figures/circle.png>
+Package pdftex.def Info: figures/circle.png  used on input line 206.
+(pdftex.def)             Requested size: 183.2007pt x 137.37839pt.
+
+Underfull \hbox (badness 1348) in paragraph at lines 239--240
+\T1/ptm/m/n/10 (ver-ti-cal and hor-i-zon-tal dis-tances seper-ated) and the
+ []
+
+[3 <./figures/circle.png>]
+Underfull \hbox (badness 1360) in paragraph at lines 261--262
+[]\T1/ptm/m/n/10 Additinonally, the re-flec-tive and trans-mi-tive grat-ings
+ []
+
+(TexAux/Report.bbl [4])
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 290.
+ (../imagej.py [5]) (../toolkit.py [6] [7] [8] [9] [10] [11] [12] [13]) [14] (TexAux/Report.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 866AB52DBC7E682A5A34762F0AC7130D;1497.
+(rerunfilecheck)             Checksum: FCE103BCEA5DA3EC57302F7AACC75FE2;1401.
  ) 
 Here is how much of TeX's memory you used:
- 49152 strings out of 475539
- 1104323 string characters out of 5778127
- 2200862 words of memory out of 5000000
- 70713 multiletter control sequences out of 15000+600000
- 642209 words of font info for 176 fonts, out of 8000000 for 9000
+ 49354 strings out of 475539
+ 1107705 string characters out of 5778127
+ 2207379 words of memory out of 5000000
+ 70809 multiletter control sequences out of 15000+600000
+ 651448 words of font info for 188 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  86i,13n,96p,2133b,1984s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{frontmatter.1} has been referenced but does not exist, replaced by a fixed one
 
-</home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TexAux/Report.pdf (10 pages, 192235 bytes).
+</home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0800.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></home/adi/.TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TexAux/Report.pdf (14 pages, 6558955 bytes).
 PDF statistics:
- 681 PDF objects out of 1000 (max. 8388607)
- 638 compressed objects within 7 object streams
- 435 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 858 PDF objects out of 1000 (max. 8388607)
+ 794 compressed objects within 8 object streams
+ 526 named destinations out of 1000 (max. 500000)
+ 135 words of extra memory for PDF output out of 10000 (max. 10000000)
 

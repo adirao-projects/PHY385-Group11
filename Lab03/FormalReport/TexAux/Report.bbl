@@ -6,7 +6,7 @@
 %Control: page (1) range
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{7}%
+\begin{thebibliography}{12}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -49,6 +49,9 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{Note1()}]{Note1}%
+  \BibitemOpen
+  \bibinfo {note} {Was unable to find part number.}\BibitemShut {Stop}%
 \bibitem [{\citenamefont {Braverman}(2025)}]{labmanual}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont {Braverman}},\ }\href@noop {} {\enquote {\bibinfo {title} {Lab 3: Diffraction},}\ } (\bibinfo {year} {2025})\BibitemShut {NoStop}%
@@ -70,4 +73,16 @@
 \bibitem [{\citenamefont {Sloan}(2024)}]{msloan}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Sloan}},\ }\href@noop {} {}\bibinfo {howpublished} {private communication} (\bibinfo {year} {2024}),\ \bibinfo {note} {assistance in setting up diffraction grating and confirming if fringe pattern is consistent with experimental results.}\BibitemShut {Stop}%
+\bibitem [{\citenamefont {Thorlabs}(2015)}]{hene}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Thorlabs}},\ }\href {https://www.thorlabs.com/drawings/cee5d1ca88f854db-AAE5A457-F569-2EE1-89D1F158F9FB5EF3/HNLS008L-Manual.pdf} {\emph {\bibinfo {title} {HNLS008R, HNLS008L : Self Contained, Red HeNe Laser System User Guide}}}\ (\bibinfo {year} {2015})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Schneider}, \citenamefont {Rasband},\ and\ \citenamefont {Eliceiri}(2012)}]{imagej}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~A.}\ \bibnamefont {Schneider}}, \bibinfo {author} {\bibfnamefont {W.~S.}\ \bibnamefont {Rasband}}, \ and\ \bibinfo {author} {\bibfnamefont {K.~W.}\ \bibnamefont {Eliceiri}},\ }\bibfield  {title} {\enquote {\bibinfo {title} {Nih image to imagej: 25 years of image analysis},}\ }\href {\doibase https://doi.org/10.1038/nmeth.2089} {\bibfield  {journal} {\bibinfo  {journal} {Nature Methods}\ }\textbf {\bibinfo {volume} {9}},\ \bibinfo {pages} {671--675} (\bibinfo {year} {2012})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Vision}(2024)}]{cam}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Vision}},\ }\href {https://cdn.alliedvision.com/fileadmin/content/documents/products/cameras/Alvium_USB/techman/Alvium-USB-Cameras_User-Guide.pdf} {\emph {\bibinfo {title} {Alvium USB Cameras User Guide}}}\ (\bibinfo {year} {2024})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Thorlabs}()}]{sqapp}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibnamefont {Thorlabs}},\ }\href {https://www.thorlabs.com/thorproduct.cfm?partnumber=S200QK} {\enquote {\bibinfo {title} {S200qk mounted pinhole square},}\ }\BibitemShut {NoStop}%
 \end{thebibliography}%
