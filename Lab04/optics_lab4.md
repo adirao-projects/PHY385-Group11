@@ -49,6 +49,8 @@ LED Light:
 - Standard blue LED
 - 2.8 V, manual claims 3.2 V, but this trips the OCP
 - 20 mA
+- Manual also claims 2.2 for the red LED and 3.2 for the gree LED
+- Power supply needs to run in controlled current mode, because there is no resistor in series with the LEDs
 
 2 diaphragm iris'. Standard, taken from the lab kit.
 
